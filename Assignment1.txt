@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<style>
+body {
+  border:1px solid black;
+  margin:0px;
+  padding:0px;
+}
+
+a:link {
+  color: red;
+  background-color: transparent;
+}
+table {
+  margin:1px;
+}
+td{
+  border: 1px solid black;
+  width:50vw;
+  padding:5px;
+}
+
+.Heading{
+ background-color:Indigo; 
+}
+.info{
+  margin: 3px;
+  border: 1px solid black;
+  font-weight: Bold;
+  text-align: center;
+  color: red;
+}
+.mail{
+  color: grey;
+}
+.bold{
+  font-weight: Bold;
+}
+
+.nopadding{
+  padding:0px;
+  margin:0px;
+}
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+<body>
+
+<div class="Heading ">
+   <img src="https://www.thesslstore.com/content/images/digicert-basic-seal-new.svg" width="150" height="75">
+   <h1 style="color:white; position:relative ;LEFT:75px ;TOP:-25px; display: inline-block; margin:0px; padding:0px;">  COMPUTER CENTER</h1>
+   <form action="https://www.iitb.ac.in/">
+     <label for="ldapid" style="color:white; position:relative ;LEFT:700px ;TOP:-50px; " class="nopadding">LDAP-ID:</label>
+     <input type="text" id="ldapid" name="ldapid" style=" position:relative ;LEFT:625px ;TOP:-30px;" class="nopadding">
+     <label for="password" style="color:white; position:relative ;LEFT:700px ;TOP:-50px; " class="nopadding" >PASSWORD:</label>
+     <input type="text" id="password" name="password" style=" position:relative ;LEFT:605px ;TOP:-30px;" class="nopadding"><br>
+     <input type="submit" value="Login" style="position:relative ;LEFT:1200px ;TOP:-50px; display: inline-block; margin:0px; padding: 2px 40px;">
+   </form>  
+</div>
+
+<div class="info">
+    <p>###No planned downtime###</p>
+</div>
+
+
+<table>
+  
+  <td style="text-align:left;">
+    <br>
+    <h4 style="color:red; margin:0px;padding:0px;" >BEWARE OF PHISHING ATTACKS:</h4>
+    <div ><p style="display: inline-block;" >-Do not give your </p><p style="display: inline-block;font-weight:bold; " >LDAP USERID & PASSWORD</p>         <p style="display: inline-block;"  > to anyone<p>
+    <p  style="position:relative ;TOP:-30px; ">
+    - Do not enter login information in any popup window <br>
+    - Do not reply to any mail asking for your login information for any <br> reason<br>
+    - Do not enter your LDAP login information on any unknown website.<br>
+    - Phishing is a fradulent attempt,usually made through email seeking<br>
+    your userid,password and personal information.<br>
+    - If you receive any such email,please report <a href="https://www.iitb.ac.in/">here</a> immediately.<br>
+    - Immediately change your passwords if you have accidentally revealed<br>
+    your credentials.<br>
+    <p class="bold nopadding"  style="position:relative ;TOP:-30px; display: inline-block;">-Computer Centre never asks you for such information.</p>
+    </p>
+    </div>
+    <h4 style="color:blue;position:relative ;TOP:-30px; ">EXAMPLE OF PHISHING MAIL:</h4>
+    <div class="mail" style="position:relative ;TOP:-30px;">
+    <p>From: support@iitb.ac.in<br>
+    Sent: Thu,March 08,2012<br>
+    Subject: UPGRADE EMAIL ACCOUNT<br>
+    We are currently upgrading our Server for ourAccount Holders.In order to upgrade your account,you need<br>
+    to assist us by sending the information below or else your Account might be lost.<br>
+    Provide the below information:<br>
+    User Name:<br>
+    Pass Word:<br>
+    Regards,<br>
+    ADMIN,IIT BOMBAY</p>
+    </div>
+  </td>
+ 
+  <td style="text-align:left;">
+    <h4 class="nopadding" style="color:red; position:relative ">ONLINE IT AGREEMENT/POLICY:</h4>
+   <div><p>
+   -All new students,staff and faculty members must read and accept the<br>
+   online IT agreement/policy.<br>
+   -IT services are made available to users only upon acceptance of the<br>
+   IT undertaking.<br>
+   -The IT policy applies to all the users of the Institue with or without<br>
+   his knowledge about IT policy and violations will be dealt with strictly.
+   </div>
+   <h4 class="bold" >-TO LEARN MORE AND SIGN ONLINE IT POLICY,CLICK <a href="https://www.iitb.ac.in/">HERE</a>.</h4>
+   <h4 style="color:blue; font-weight: Bold; ">SOME USEFUL LINKS:</h4>
+   <p class="nopadding" style="color:grey;" >-<a href="https://www.iitb.ac.in/">Getting started</a>(Faculty,Staff and Student)</p>
+   -<a href="https://www.iitb.ac.in/">GPO-Webmail</a><br>
+   -<a href="https://www.iitb.ac.in/">FTP Portal</a><br>
+   -<a href="https://www.iitb.ac.in/">Report a Problem</a><br>
+   <br>
+   <p style="color:blue; font-weight: Bold;">CC'S HELPDESK:</p>
+   <br>
+   - You can visit CC's HelpDesk between<br>
+   11:00am - 1:00pm & 3:30pm - 5:30pm<br>
+   <p style="position:relative; LEFT:50px;">At</p>
+   Ground floor,<br>
+   New Computer Center Building,<br>
+   IIT Bombay.
+   </p>
+  </td>
+  
+  
+</table>
+
+</body>
+</html>
