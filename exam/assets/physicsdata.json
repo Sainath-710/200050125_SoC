@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "question": "What are the units of Force?",
+        "QuestionType":"Multiple-Correct",
+        "Option1": "N",
+        "Option2": "Pa",
+        "Option3": "dyne",
+        "Option4": "J" ,
+        "answers": [1,0,1,0]
+    },
+    {
+        "id": 2,
+        "question": "What is the unit of Pressure?",
+        "QuestionType":"Single-Correct",
+        "Option1": "N",
+        "Option2": "Pa",
+        "Option3": "J",
+        "Option4": "erg" ,
+        "answers": [0,1,0,0]
+    },
+    {
+        "id": 3,
+        "question": "What are the units of work? ",
+        "Option1": "N",
+        "QuestionType":"Multiple-Correct",
+        "Option2": "J",
+        "Option3": "erg",
+        "Option4": "m/s",
+        "answers": [0,1,0,0]
+    },
+    {
+        "id": 4,
+        "question": "What is the unit of displacement? ",
+        "QuestionType":"Single-Correct",
+        "Option1": "s",
+        "Option2": "m/s",
+        "Option3": "m",
+        "Option4": "s/m",
+        "answers": [0,0,1,0]
+    },
+    {
+        "id": 5,
+        "question": "What is the capital of speed? ",
+        "QuestionType":"Single-Correct",
+        "Option1": "kg",
+        "Option2": "m*s",
+        "Option3": "m",
+        "Option4": "m/s",
+        "answers": [0,0,0,1]
+    }
+]
+
+

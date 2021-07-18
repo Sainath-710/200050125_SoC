@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "question": "What are the common oxidation states of Iron in aqueous state?",
+        "QuestionType":"Multiple-Correct",
+        "Option1": "+2",
+        "Option2": "+1",
+        "Option3": "+3",
+        "Option4": "-1" ,
+        "answers": [1,0,1,0]
+    },
+    {
+        "id": 2,
+        "question": "What is the symbol of Sodium?",
+        "QuestionType":"Single-Correct",
+        "Option1": "Na",
+        "Option2": "K",
+        "Option3": "S",
+        "Option4": "Sa" ,
+        "answers": [1,0,0,0]
+    },
+    {
+        "id": 3,
+        "question": "What is the symbol of Potassium? ",
+        "Option1": "K",
+        "QuestionType":"Single-Correct",
+        "Option2": "Na",
+        "Option3": "P",
+        "Option4": "W",
+        "answers": [1,0,0,0]
+    },
+    {
+        "id": 4,
+        "question": "What is the molarity of 1.0N HCl solution? ",
+        "QuestionType":"Single-Correct",
+        "Option1": "1.0M",
+        "Option2": "2.0M",
+        "Option3": "4.0M",
+        "Option4": "0.5M",
+        "answers": [1,0,0,0]
+    },
+    {
+        "id": 5,
+        "question": "What is the normality of 10.0M sodium sulphate solution? ",
+        "QuestionType":"Single-Correct",
+        "Option1": "10.0N",
+        "Option2": "5.0N",
+        "Option3": "20.0N",
+        "Option4": "40.0N",
+        "answers": [0,0,1,0]
+    }
+]
+
