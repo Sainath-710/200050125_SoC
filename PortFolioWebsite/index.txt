@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="CSS.css">
+<script src="myScript.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<html>
+
+<body style = "margin:0;background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBwcHCAgHDQcHBwoHBwcIBw8IDQcKIBEWFiARExMYHSggGCYlGx8fITEhMSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0NDysZHxkrNy0rKystKzcrKysrKysrLSsrKysrKysrKy0tKystKysrKysrKysrKysrKysrKysrK//AABEIAKoBKQMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAABAAIFBAb/xAAWEAEBAQAAAAAAAAAAAAAAAAAAEQH/xAAbAQEBAQADAQEAAAAAAAAAAAACAAEDBAYFB//EABgRAQEBAQEAAAAAAAAAAAAAAAABAhES/9oADAMBAAIRAxEAPwD59JE/SEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkmJIwxdQhhhg2sEUahg3SZhhhg3TBDDDAtQijUMH0x5Ek7hpJJJJJJJJJJJJJJJJJJJJJJJJJJJIxiBhzDGdTMMahg3TGYY1FBukIYYYNrBDDDAukIYYYN0xmGNRQbpCGGGD6Y8CSfRciSSSSSSSSSSSSSSSSSSSSSRhjOoRRqGDaxmGNRQbpCGGGDdMEMMMC6Qhhhg3TGYY1DBukzDDDBumCGGGDdIQwwwLWCKNRQfScxJPruVJJJJJJJJJJJJJGMQUahjOpmGNQwbpjMMMMG6Qhhhg3TBDDDAukIo1DBumMwxqKDdIQwwwbWCGGGBdIRRqGDdMZhjUUG6Qhhhg2sEUahg9TjpJ9xzJJJJJJJGHMZ1MwxqGDaxmGGGDdIQwwwbpghhhg3SZhjUMC6YzDGooNqEMMMG6YIYYYN0hDDDAumMwxqKDdIQwwwbpghhhg3SGYYYYN0xmGNQhdJmGGGD6Y4aRj0LsBRrMMZ1Mw5jUUG6YIYYYN0hDDDBumCKNQwbpMwxqKBdMEMMMG6Qhhhg3TBDDDBukzDGoYF0xmGGGDdIQwwwbpghhhg3SEUazDAumMwxqKDdIQwwwbpghhhg3SEUaig9Y4MMMMeiunYEMMMG6YIYYYN0mYY1DBumMwwwwLpCGGGDdMEMMMG1MwxqGDdMZhjUUC6Qhhhg3SEMMMG6YIYYYN0xmGNRQLpCGGGDdMEMMMG6Qhhhg3SEMMMG1jMMahgXSZhhhH0xwIY1DHo7p2GcwwwwbpghhhgXSEMMMG1gijUMG6TMMahg3TGYYYYF0hDDDBtYIYYYNqZhjUMG1jMMMMC6QhhzDBumCGGGDdIQwwwbpjMMahgXSZhjUUG6YIYYYNqEUahg2sZhjUUH0nBhhhj0V05xDDDBtTMMahg3SZhhhg3TBDDDAukIo1DBumMwxqGDamYY1FBumCGGGBdMEMMMG6Qhhhg3SZhjUMG6YzDGoYF0mYYYRumCGGGDamYY1DBumMwxqKBdIQwwwbpgiahg+k4EMMMejunOIYYYF0hDDDBtYzDGoYN0mYY1DBtYzDDDBtQhhhgXTBDDDBukzDGoYN0xmGGGDdIQwwwLpghhhg3SEUahg2sZhzGooN0hDDDAtYIYYYN0hDDDBukIo1DBumMwwwwepwYoS9Ha5xDDhwLUIYTg2sEMRwbUoYiNrBDCQtQhhw4NrBDE1g2oQwobWKGI4HUIYSNrBmGE4NqEMKG1ihiI2pRQkLWCGEjahDFhwbWKGIhalEkzqf/9k=');background-repeat: no-repeat;background-attachment: fixed; background-size: cover;">
+<ul class = "navbar">
+	<li class = "item"><button onclick = "func(this.id)" class = "section" id = "chooseHome" style = "background-color:green;">Home</button></li>
+    <li class = "item"><button onclick = "func(this.id)" class = "section" id = "chooseInterests">Interests</button></li>
+    <li class = "item"><button onclick = "func(this.id)" class = "section" id = "chooseMore">More</button></li>
+</ul>
+<br>
+<div class = "Body" >
+<div id = "homeContent">
+<h1 style = "text-align: center;">Hello!</h1>
+I am Sainath, currently a first year undergraduate student(to be sophomore:)) pursuing Computer Science and Engineering at IIT, Bombay.<br><br>
+<b>About me:</b><br>
+<ul>
+<li>I am from Andhra Pradesh.</li>
+<br>
+<li>I completed my education upto class 10 in Srikakulam.</li>
+<br>
+<li>And then I finished my +2 in Visakapatnam with a percentage of 97.8%.</li>
+<br>
+<li>I secured AIR-173 in JEE-Advanced 2020 and took admission in IITB.</li>
+
+</ul>
+</div>
+
+<div id = "interestsContent" style = "display: none;">
+<br><br>
+<b>My Interests:</b><br>
+<ul>
+<li>Anything related to Mathematics or Computer Science interests me :).</li>
+<br>
+<li>I was really fascinated by the concepts of Linear Algebra and Calculus as well as the power of programming because of the courses 
+I have taken.</li>
+<br>
+<li>I am interested in the working of efficient algorithms and logic.I have also been interested in Competitive Programming lately.</li>
+<br>
+<li>I am huge fan of cricket and I follow almost all the international matches.I also like playing cricket though it has not been possible recently
+due to COVID restrictions :(.</li>
+<br>
+<li>I also like listening to music :)</li>
+</ul>
+</div>
+
+<div id = "moreContent" style = "display: none;">
+<br><br>
+<b>Some things I have done at IITB:</b>
+<ul>
+<li>Implemented the Lasso project using OOP as a part of CS101 Project.You can find the code 
+<a href = 'https://drive.google.com/drive/folders/1Jcv4lJbMqA3Y8la6TaMyjwgwP6igo-GF?usp=sharing'>here</a></li>
+<br>
+<li>Link to the Web Development Project I have taken as a part of SoC-
+<a href = 'https://github.com/Sainath-710/200050125_SoC'>GitHub page</a></li>
+<br>
+<li>Link to an examination app(a dummy one :)) that I have created using Angular - 
+<a href = 'https://l.facebook.com/l.php?u=https%3A%2F%2Fexamination-f6677.web.app%2F%3Ffbclid%3DIwAR3AT786M7ofGR1-EIzVABxHDu1gr0JUqXAg2TFuCdXkEHwqvkIsB89tjMo&h=AT12bqGW2itdKbSApGYPUEXgI-9Y2iAtDNrtcCFUZ8crj2ECtRna0mfZ6Lb5zJJRsoFir2lt8jdO5u11q02eipdB24QRgYkYLJ42JQrpkPY02hqFSEKRqUOZfiscHWg5kncTyo8dmFyGaSlnDIg_GA'>App</a></li>
+<br>
+<li>Links to few Tinkercad Projects - <a href = 'https://docs.google.com/document/d/1K_BJaLegm_igaVv3UmKVx7x72D81Jp4SVzSKyRvdxP4/edit?usp=sharing'>Arduino</a></li>
+</ul>
+</div>
+</div>
+<div style = "text-align: center;position: relative;bottom:-300px; background-color: black;color:green;padding:40px; margin:0;">
+<h2 style = "font-family:Roboto;">Contact Info:</h2>
+<a href="https://www.facebook.com/sainath.vavilapalli.3/" class="fa fa-facebook"></a> &nbsp;&nbsp;
+<a href="https://www.instagram.com/vavilapallisainath/" class="fa fa-instagram"></a>
+<h3 style = "font-family:Roboto;">GMail: 200050125@iitb.ac.in </h3>
+<h3 style = "font-family:Roboto;">Phone: 8897057914 </h3>
+</div>
+</body>
+</html>
+

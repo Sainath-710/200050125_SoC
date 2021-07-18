@@ -1,0 +1,58 @@
+body{
+
+}
+
+.Body {
+font-size: 18px;
+width: 50%;
+margin: auto;
+word-wrap: break-word;
+font-family: Roboto;
+}
+
+.navbar{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: black;
+}
+
+.item{
+background-color: black;
+float: left;
+}
+
+.item .section{
+display: block;
+color: white;
+background-color: black;
+font-family: Roboto;
+font-size: 18px;
+padding: 10px;
+border: 1px solid black;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.8;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background:  rgb(250,9,35);
+  color: white;
+}

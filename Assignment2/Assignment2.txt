@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<style>
+body {
+  border:1px solid black;
+  margin:10px;
+  padding:0px;
+}
+
+a:link {
+  color: red;
+  background-color: transparent;
+}
+table {
+  margin:1px;
+}
+td{
+  border: 1px solid black;
+  width:50%;
+  padding:5px;
+}
+
+.Heading{
+ background-color:Indigo; 
+}
+.info{
+  
+  margin: 3px;
+  border: 1px solid black;
+  font-weight: Bold;
+  text-align: center;
+  color: red;
+}
+.mail{
+  color: grey;
+}
+.bold{
+  font-weight: Bold;
+}
+
+.nopadding{
+  padding:0px;
+  margin:0px;
+}
+
+.nav { 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+
+/*Toggle switch*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(200,200,200);
+  border-radius: 34px;
+  transition: 0.5s;
+}
+
+.slider:after {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius:50%;
+  background-color: white;
+  transition: 0.5s;
+}
+
+input:checked + .slider {
+  background-color: rgb(60,60,60);
+}
+
+
+input:checked + .slider:after {
+  transform: translateX(26px);
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*dark mode*/
+.dark-mode {
+  background-color: black;
+  color: white;
+  border-color :yellow;
+}
+.dark-mode-column {
+  border-color: rgb(255,245,70);  
+}
+.dark-mode-heading {
+  background-color: Indigo;
+}
+
+* {
+  
+}
+
+@media only screen and (max-width: 768px) {
+.responsive {
+  display: block;
+  width: 98%;
+  
+ }
+}
+
+</style>
+<body>
+<div id = "Loggedout">
+<div class="Heading " id = "Heading">
+<ul class="nav">
+  <li><img src="https://www.thesslstore.com/content/images/digicert-basic-seal-new.svg" width="150" height="75" ></li>
+  <li><h1 style="color:white;" >COMPUTER CENTER</h1></li>
+  <li><form action="file:///C:/Users/USER/Documents/SoC%20Assignment2.html">
+   
+    <li><label for="ldapid" style="color:white; color:white;" class="nopadding " >LDAP-ID:</label><br>
+    <input type="text" id="ldapid" name="ldapid" class="nopadding "></li>
+    
+    
+    <li><label for="password" style="color:white;" >PASSWORD:</label><br>
+    <input type="text" id="password" name="password" class="nopadding "></li>
+    
+   </li>
+   <li><label  class="switch" > <input type="checkbox" oninput = "myFunction()"> <span class="slider"></span></label><br>
+  <button onclick = "Validate()" >Login</button></li>
+  
+</ul>
+
+</div>
+
+<div class="info" id = "header" >
+    <p>###No planned downtime###</p>
+</div>
+
+
+<table >
+  
+  <td style="text-align:left; " id = "col1" class="responsive" >
+    <h4 style="color:red; margin:0px;padding:0px;" >BEWARE OF PHISHING ATTACKS:</h4>
+    <div ><p style="display: inline-block;" >-Do not give your </p><p style="display: inline-block;font-weight:bold; " >LDAP USERID & PASSWORD</p>         <p style="display: inline-block;"  > to anyone<p>
+    <p  style="position:relative ;TOP:-30px; ">
+    - Do not enter login information in any popup window <br>
+    - Do not reply to any mail asking for your login information for any <br> reason<br>
+    - Do not enter your LDAP login information on any unknown website.<br>
+    - Phishing is a fradulent attempt,usually made through email seeking<br>
+    your userid,password and personal information.<br>
+    - If you receive any such email,please report <a href="https://www.iitb.ac.in/">here</a> immediately.<br>
+    - Immediately change your passwords if you have accidentally revealed<br>
+    your credentials.<br>
+    <p class="bold nopadding"  style="position:relative ;TOP:-30px; display: inline-block;">-Computer Centre never asks you for such information.</p>
+    </p>
+    </div>
+    <h4 style="color:blue;position:relative ;TOP:-30px; ">EXAMPLE OF PHISHING MAIL:</h4>
+    <div class="mail" style="position:relative ;TOP:-30px;">
+    <p>From: support@iitb.ac.in<br>
+    Sent: Thu,March 08,2012<br>
+    Subject: UPGRADE EMAIL ACCOUNT<br>
+    We are currently upgrading our Server for ourAccount Holders.In order to upgrade your account,you need<br>
+    to assist us by sending the information below or else your Account might be lost.<br>
+    Provide the below information:<br>
+    User Name:<br>
+    Pass Word:<br>
+    Regards,<br>
+    ADMIN,IIT BOMBAY</p>
+    </div>
+  </td>
+
+  <td style="text-align:left;" id = "col2" class="responsive">
+    <h4 class="nopadding" style="color:red; position:relative ">ONLINE IT AGREEMENT/POLICY:</h4>
+   <div><p>
+   -All new students,staff and faculty members must read and accept the<br>
+   online IT agreement/policy.<br>
+   -IT services are made available to users only upon acceptance of the<br>
+   IT undertaking.<br>
+   -The IT policy applies to all the users of the Institue with or without<br>
+   his knowledge about IT policy and violations will be dealt with strictly.
+   </div>
+   <h4 class="bold" >-TO LEARN MORE AND SIGN ONLINE IT POLICY,CLICK <a href="https://www.iitb.ac.in/">HERE</a>.</h4>
+   <h4 style="color:blue; font-weight: Bold; ">SOME USEFUL LINKS:</h4>
+   <p class="nopadding" style="color:grey;" >-<a href="https://www.iitb.ac.in/">Getting started</a>(Faculty,Staff and Student)</p>
+   -<a href="https://www.iitb.ac.in/">GPO-Webmail</a><br>
+   -<a href="https://www.iitb.ac.in/">FTP Portal</a><br>
+   -<a href="https://www.iitb.ac.in/">Report a Problem</a><br>
+   <br>
+   <p style="color:blue; font-weight: Bold;">CC'S HELPDESK:</p>
+   <br>
+   - You can visit CC's HelpDesk between<br>
+   11:00am - 1:00pm & 3:30pm - 5:30pm<br>
+   <p style="position:relative; LEFT:50px;">At</p>
+   Ground floor,<br>
+   New Computer Center Building,<br>
+   IIT Bombay.
+   </p>
+  </td>  
+ 
+  </ul>
+</table>
+</div>
+<div id="Loggedin" style="display:none; text-align:center;">
+ <label class="switch" id="displaythis" style="float:right;" > <input type="checkbox" oninput = "myFunction()"> <span class="slider round"></span></label>
+  <p id="time" style="text-align:center"></p>
+  <p style="text-align:center" style="display: inline-block;">You have logged in as <p id="rollno" style="display: inline-block;"></p></p>
+  <button onclick="Logout()" >Logout</button>
+</div>
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+   var table1 = document.getElementById("col1");
+   var table2 = document.getElementById("col2");
+   var header = document.getElementById("header");
+   var heading = document.getElementById("Heading");
+   table1.classList.toggle("dark-mode-column");
+   table2.classList.toggle("dark-mode-column");
+   header.classList.toggle("dark-mode-column");
+   heading.classList.toggle("dark-mode-heading");
+}
+function Validate() {
+  var x = document.getElementById("ldapid").value;
+  if(x>=200000000 && x<=202000000) {
+    document.getElementById("Loggedout").style.display = "none";
+    var d = new Date();
+    document.getElementById("time").innerHTML = d;
+    document.getElementById("rollno").innerHTML = x;
+    document.getElementById("Loggedin").style.display = "block";
+  }
+  else
+  {
+  alert("Enter valid LDAP ID");
+  }
+}
+function Logout() {
+  document.getElementById("Loggedout").style.display = "block";
+  document.getElementById("Loggedin").style.display = "none";
+  document.getElementById("ldapid").value="";
+  document.getElementById("password").value="";
+}
+</script>
+</body>
+</html>
