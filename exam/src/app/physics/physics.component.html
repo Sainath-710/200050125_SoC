@@ -1,0 +1,66 @@
+<body style = "background-color: orange ;">
+  <div class ="side_column"></div>
+  
+  <div [hidden] = "submitted" class = "main_column" >
+    <button id = "btn">{{"Question " + questions[question_number].id}}</button>
+    <button id = "btn" style = "float:right;">{{questions[question_number].QuestionType}}-Type</button>
+    <br><br>
+    <div class = "display">{{questions[question_number].question}}</div>
+  
+    <form [hidden] = "questions[question_number].QuestionType == 'Multiple-Correct'" class = "display" >
+      <input #first_option type = "radio" id="option1" (click) = "deSelect($event,first_option,second_option,third_option,fourth_option)" [value] = "options[question_number][0]" [checked] = "options[question_number][0]" name = "option">
+      <label for="option1"> {{questions[question_number].Option1}} </label><br>
+      <input #second_option type="radio" id="option2" (click) = "deSelect($event,first_option,second_option,third_option,fourth_option)" [value] = "options[question_number][1]" [checked] = "options[question_number][1]" name = "option">
+      <label for="option2"> {{questions[question_number].Option2}} </label><br>
+      <input #third_option type="radio" id="option3" (click) = "deSelect($event,first_option,second_option,third_option,fourth_option)" [value] = "options[question_number][2]" [checked] = "options[question_number][2]" name = "option">
+      <label for="option3"> {{questions[question_number].Option3}} </label><br>
+      <input #fourth_option type="radio" id="option4" (click) = "deSelect($event,first_option,second_option,third_option,fourth_option)" [value] = "options[question_number][3]" [checked] = "options[question_number][3]" name = "option">
+      <label for="option4"> {{questions[question_number].Option4}} </label>
+    </form>
+    <form [hidden] = "questions[question_number].QuestionType == 'Single-Correct'" class = "display" >
+      <input #multi_first_option type = "checkbox" id="multi_option1" [value] = "options[question_number][0]" [checked] = "options[question_number][0]" name = "multi_option">
+      <label for="multi_option1"> {{questions[question_number].Option1}} </label><br>
+      <input #multi_second_option type="checkbox" id="multi_option2" [value] = "options[question_number][1]" [checked] = "options[question_number][1]" name = "multi_option">
+      <label for="multi_option2"> {{questions[question_number].Option2}} </label><br>
+      <input #multi_third_option type="checkbox" id="multi_option3" [value] = "options[question_number][2]" [checked] = "options[question_number][2]" name = "multi_option">
+      <label for="multi_option3"> {{questions[question_number].Option3}} </label><br>
+      <input #multi_fourth_option type="checkbox" id="multi_option4"  [value] = "options[question_number][3]" [checked] = "options[question_number][3]" name = "multi_option">
+      <label for="multi_option4"> {{questions[question_number].Option4}} </label>
+    </form>
+    <br>
+    <div *ngFor = "let que of questions" style = "display: inline-block;">
+      <div >
+        <button [style.background-color] = "marked_for_review[que.id-1] ? 'darkblue':saved[que.id-1] ? 'green': (visited[que.id-1] && !saved[que.id-1])?'red':'grey'" (click)="navigate($event,first_option,second_option,third_option,fourth_option,multi_first_option,multi_second_option,multi_third_option,multi_fourth_option)" id = "btn" value = "{{que.id}}" >{{que.id}}</button> &nbsp;
+      </div>  
+    </div>
+    <br><br>
+    <button (click) = "questions[question_number].QuestionType == 'Single-Correct' ? GoToPreviousQuestion(first_option,second_option,third_option,fourth_option): GoToPreviousQuestion(multi_first_option,multi_second_option,multi_third_option,multi_fourth_option)" id = "btn">Previous</button> &nbsp;&nbsp;&nbsp;
+    <button (click) = "questions[question_number].QuestionType == 'Single-Correct' ? GoToNextQuestion(first_option,second_option,third_option,fourth_option): GoToNextQuestion(multi_first_option,multi_second_option,multi_third_option,multi_fourth_option)" id = "btn">Next</button> &nbsp;&nbsp;&nbsp;
+    <button (click) = "questions[question_number].QuestionType == 'Single-Correct' ? SaveandNext($event,questions[question_number].QuestionType,first_option,second_option,third_option,fourth_option):SaveandNext($event,questions[question_number].QuestionType,multi_first_option,multi_second_option,multi_third_option,multi_fourth_option)" value = "Save" id = "btn">Save and Next</button> &nbsp;&nbsp;&nbsp;
+    <button (click) = "questions[question_number].QuestionType == 'Single-Correct' ? SaveandNext($event,questions[question_number].QuestionType,first_option,second_option,third_option,fourth_option):SaveandNext($event,questions[question_number].QuestionType,multi_first_option,multi_second_option,multi_third_option,multi_fourth_option)" value = "Review" id = "btn">Mark for Review and Next</button>
+  </div>
+  
+  <div [hidden] = "!submitted" class = "main_column">
+      <button style = "align-content: center;" id = "btn"><b>Physics-Section Total: {{maths_marks}}.0/20.0</b></button>
+      <br><br>
+      <div *ngFor = "let que of questions" style = "display: block;">
+        <button id = "btn">{{"Question " + que.id}}</button>
+        <button id = "btn">{{"Marks: " + marks[que.id-1] + ".0/4.0"}}</button>
+        <button id = "btn" style = "float:right;">Single correct Type</button>
+        <div  class = "display">{{que.question}}</div>
+        <form  class = "display" >
+          <input  type = "radio" id="post_option1" [value] = "options[question_number][0]" onclick = "this.checked = false;" name = "post_option">
+          <label [style.background-color] = "questions[que.id-1].answers[0] == 1 ? 'green' : options[que.id-1][0] == 1 && questions[que.id-1].answers[0] == 0 ? 'red':'yellow'" for="post_option1"> {{que.Option1}} </label><br>
+          <input  type = "radio" id="post_option2" [value] = "options[question_number][1]" onclick = "this.checked = false;" name = "post_option">
+          <label [style.background-color] = "questions[que.id-1].answers[1] == 1 ? 'green' : options[que.id-1][1] == 1 && questions[que.id-1].answers[1] == 0 ? 'red':'yellow'" for="post_option2"> {{que.Option2}} </label><br>
+          <input  type = "radio" id="post_option3" [value] = "options[question_number][2]" onclick = "this.checked = false;" name = "post_option">
+          <label [style.background-color] = "questions[que.id-1].answers[2] == 1 ? 'green' : options[que.id-1][2] == 1 && questions[que.id-1].answers[2] == 0 ? 'red':'yellow'" for="option3"> {{que.Option3}} </label><br>
+          <input  type = "radio" id="post_option4" [value] = "options[question_number][3]" onclick = "this.checked = false;" name = "post_option">
+          <label [style.background-color] = "questions[que.id-1].answers[3] == 1 ? 'green' : options[que.id-1][3] == 1 && questions[que.id-1].answers[3] == 0 ? 'red':'yellow'" for="post_option4"> {{que.Option4}} </label>
+        </form>
+        <br>
+      </div>
+  </div>
+  <div class ="side_column" ></div>
+  </body>
+  

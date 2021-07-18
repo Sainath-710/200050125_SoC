@@ -27,7 +27,7 @@
         "Option2": "J",
         "Option3": "erg",
         "Option4": "m/s",
-        "answers": [0,1,0,0]
+        "answers": [0,1,1,0]
     },
     {
         "id": 4,
@@ -41,7 +41,7 @@
     },
     {
         "id": 5,
-        "question": "What is the capital of speed? ",
+        "question": "What is the unit of speed? ",
         "QuestionType":"Single-Correct",
         "Option1": "kg",
         "Option2": "m*s",

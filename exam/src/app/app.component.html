@@ -1,0 +1,49 @@
+<body style = " border-color: black;" >
+
+<div style = "background-color:deepskyblue;">
+  <h1 style = "padding:5px;text-align:center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;" >Welcome to the test</h1>
+  <h2 [hidden] = "!submit" style = "padding:5px;text-align:center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;" >
+    Congrats!Your test has been successfully submitted.
+  </h2>
+  <ul [hidden] = "!start" style = "padding:10px;">
+    <button (click) = "GoToMaths()" id = "btn"><a  style = "text-decoration: none; color:floralwhite">Mathematics</a></button>
+    &nbsp;&nbsp;
+    <button (click)= "GoToPhysics()" id = "btn"><a  style = "text-decoration: none; color:floralwhite">Physics</a></button>
+    &nbsp;&nbsp;
+    <button (click) = "GoToChemistry()" id = "btn"><a  style = "text-decoration: none; color:floralwhite">Chemistry</a></button>
+  </ul>
+</div>
+<div [hidden] = "start" class = "side_column"></div>
+<div [hidden] = "start" class = "main_column display"  >
+  <h2 style = "text-align:center;">Instructions</h2>
+  <ul>
+    <b>1)</b>The examination consists of three sections Mathematics,Physics and Chemistry.<br>
+    <b>2)</b>You can navigate to each section by clicking on the respective section's name in the navigation bar.<br>
+    <b>3)</b>Each question carries four marks and there is negative marking for marking wrong answers.<br>
+    <b>4)</b>Each question can be either of single-correct-type,where only one option can be correct or multiple <br>
+      correct type where more than one option can be chosen.<br>
+    <b>5)</b>You will get 4 marks if and only if you choose "all" the options which are correct.<br>
+    <b>6)</b>You must click o  the "Save and Next" button in order to save a question<br>
+      Otherwise your answers will not be saved.<br>
+    <b>7)</b>You can use the "Mark for Review and Next" button to mark a question for review.<br>
+      Note that all the questions marked for review will be considered for evaluation.<br>
+    <b>8)</b>The total duration of the exam is 10 minutes.The exam will automatically get submitted
+      after the stipulated time.
+  </ul>
+  <div style = " display: flex;justify-content: center; align-items: center;">
+  <button id = "btn" (click) = "Start();startTimer()">Start Test</button>
+  </div>
+</div>
+<div [hidden] = "start" class = "side_column"></div>
+
+<app-maths [hidden] = "!maths" [submitted] = "submit" ></app-maths>
+<app-physics [hidden] = "!physics" [submitted] = "submit"></app-physics>
+<app-chemistry [hidden] = "!chemistry" [submitted] = "submit" ></app-chemistry>
+
+<div [hidden] = "!start" class = "main_column display" style = "background-color: white;"  >
+<button [hidden] = "!start || submit" style = " justify-content: center; align-items: center;"  id = "btn">Time Left : {{timeLeft_min}} min {{timeLeft%60}} sec</button>
+<button style = " justify-content: center; align-items: center;" id = "btn" (click) = "Submit()" [hidden] = "!start || submit">Submit</button>
+</div>
+<div [hidden] = "!start" class = "side_column"></div>
+</body>
+<script src = "C:\Users\USER\Documents\Angular_start\exam\src\assets\scrip.js"></script>
